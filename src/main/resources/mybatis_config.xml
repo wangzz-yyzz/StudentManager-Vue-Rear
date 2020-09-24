@@ -17,5 +17,6 @@
     <!-- 映射文件路径 -->
     <mappers>
         <mapper resource="mapper\StudentMapper.xml"/>
+        <mapper resource="mapper\ManagerMapper.xml"/>
     </mappers>
 </configuration>

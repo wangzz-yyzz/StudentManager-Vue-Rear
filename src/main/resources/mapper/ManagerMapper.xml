@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.app.mapper.ManagerMapper">
+    <update id="updateManager">
+        update manager
+        <set>
+            password = #{password}
+        </set>
+        where name = #{name}
+    </update>
+
+    <insert id="insertManager">
+        insert into manager values (name=#{name},password=#{password})
+    </insert>
+
+    <delete id="delManager">
+        delete from manager where name = #{name}
+    </delete>
+
+    <select id="selManagerByName" resultType="com.app.pojo.Manager">
+        select * from manager where name=#{name}
+    </select>
+</mapper>
