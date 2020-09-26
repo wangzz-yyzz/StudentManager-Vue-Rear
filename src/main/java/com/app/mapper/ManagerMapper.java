@@ -11,4 +11,5 @@ public interface ManagerMapper {
     void updateManager(Manager manager);
     void delManager(String name);
     List<Manager> selManagerByName(String name);
+    List<Manager> selManager();
 }

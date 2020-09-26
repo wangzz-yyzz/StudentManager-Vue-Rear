@@ -9,4 +9,5 @@ public interface ManagerService {
     void delManager(String name);
     void updateManager(Manager manager);
     List<Manager> findManagerByName(String name);
+    List<Manager> findManagerAll();
 }

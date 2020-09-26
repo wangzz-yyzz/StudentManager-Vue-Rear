@@ -34,4 +34,9 @@ public class ManagerServiceImpl implements ManagerService {
     public List<Manager> findManagerByName(String name) {
         return managerMapper.selManagerByName(name);
     }
+
+    @Override
+    public List<Manager> findManagerAll() {
+        return managerMapper.selManager();
+    }
 }
