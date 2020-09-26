@@ -16,7 +16,7 @@
     </update>
 
     <select id="selStudent" resultType="com.app.pojo.Student">
-        select * from student order by id desc
+        select * from student order by id
     </select>
 
     <insert id="insertStudent">

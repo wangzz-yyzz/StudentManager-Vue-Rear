@@ -14,8 +14,11 @@ import java.util.List;
 @RestController
 public class ManagerController {
 
+    private final ManagerService managerService;
     @Autowired
-    private ManagerService managerService;
+    public ManagerController(ManagerService managerService){
+        this.managerService=managerService;
+    }
 
     @RequestMapping("/add")
     public String add(Manager manager){
