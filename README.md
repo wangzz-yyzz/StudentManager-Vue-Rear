@@ -6,4 +6,8 @@
 
 前端地址：https://github.com/wangzz-yyzz/StudentManager-Vue-Front.git
 
-### 
+### Database
+
+run holiday.sql
+
+运行holiday.sql脚本
