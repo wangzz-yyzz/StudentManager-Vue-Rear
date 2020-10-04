@@ -11,3 +11,10 @@
 run holiday.sql
 
 运行holiday.sql脚本
+
+### 技术
+Vue axios element-ui  
+springboot mybatis   
+
+### deploy
+you don't

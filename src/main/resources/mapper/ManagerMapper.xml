@@ -24,6 +24,10 @@
     </select>
 
     <select id="selManager" resultType="com.app.pojo.Manager">
-        select * from manager
+        select * from manager;
     </select>
+
+    <!--    <select id="selManager" resultType="com.app.pojo.Manager">-->
+<!--        select * from manager-->
+<!--    </select>-->
 </mapper>
