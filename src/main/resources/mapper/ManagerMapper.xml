@@ -12,7 +12,7 @@
     </update>
 
     <insert id="insertManager">
-        insert into manager values (name=#{name},password=#{password})
+        insert into manager values (#{name},#{password})
     </insert>
 
     <delete id="delManager">
