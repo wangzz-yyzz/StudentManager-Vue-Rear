@@ -64,7 +64,7 @@ public class ManagerController {
         if (managers.size() == 0) {
             return "ok";
         } else {
-            return String.valueOf(managers.size());
+            return "has same name numbers " + managers.size();
         }
     }
 }
