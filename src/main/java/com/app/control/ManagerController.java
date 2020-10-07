@@ -57,4 +57,14 @@ public class ManagerController {
     public Manager getAll(String name){
         return managerService.findManagerByName(name).get(0);
     }
+
+    @RequestMapping("/check_if_has_same_name")
+    public String checkIfHasSameName(String name){
+        List<Manager> managers = managerService.findManagerByName(name);
+        if (managers.size() == 0) {
+            return "ok";
+        } else {
+            return String.valueOf(managers.size());
+        }
+    }
 }
