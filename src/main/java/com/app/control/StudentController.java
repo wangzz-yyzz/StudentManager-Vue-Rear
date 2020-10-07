@@ -3,10 +3,12 @@ package com.app.control;
 import com.app.pojo.Student;
 import com.app.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.security.PermitAll;
 import java.util.List;
 
 @CrossOrigin("http://localhost:5050")
@@ -20,7 +22,6 @@ public class StudentController {
     public StudentController(StudentService studentService){
         this.studentService=studentService;
     }
-
 
     @RequestMapping("/selStudentAll")
     public List<Student> findStudentAll(){

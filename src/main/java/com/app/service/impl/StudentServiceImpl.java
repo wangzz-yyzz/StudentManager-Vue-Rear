@@ -13,8 +13,11 @@ import java.util.List;
 @Transactional
 public class StudentServiceImpl implements StudentService {
 
+    private final StudentMapper studentMapper;
     @Autowired(required = false)
-    private StudentMapper studentMapper;
+    public StudentServiceImpl(StudentMapper studentMapper){
+        this.studentMapper = studentMapper;
+    }
 
     @Override
     public void addStudent(Student student) {

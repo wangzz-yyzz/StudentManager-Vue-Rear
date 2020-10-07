@@ -4,6 +4,10 @@ import com.app.mapper.ManagerMapper;
 import com.app.pojo.Manager;
 import com.app.service.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,8 +16,12 @@ import java.util.List;
 @Service
 @Transactional
 public class ManagerServiceImpl implements ManagerService {
+
+    private final ManagerMapper managerMapper;
     @Autowired(required = false)
-    private ManagerMapper managerMapper;
+    public ManagerServiceImpl(ManagerMapper managerMapper){
+        this.managerMapper = managerMapper;
+    }
 
     @Override
     public void addManager(Manager manager) {
@@ -39,4 +47,5 @@ public class ManagerServiceImpl implements ManagerService {
     public List<Manager> findManagerAll() {
         return managerMapper.selManager();
     }
+
 }

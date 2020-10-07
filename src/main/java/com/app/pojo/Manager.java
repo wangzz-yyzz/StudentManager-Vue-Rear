@@ -1,5 +1,9 @@
 package com.app.pojo;
 
+import org.springframework.context.support.BeanDefinitionDsl;
+
+import java.util.List;
+
 public class Manager {
     private String name;
     private String password;
